@@ -11,7 +11,7 @@ Through this project, I examined patterns in order volume and revenue to underst
 
 ---
 
-## File Details  
+## Data Details  
 
 - **Source of Data:** [BlinkitRawData](https://www.kaggle.com/datasets/akxiit/blinkit-sales-dataset/data)
 - **Primary Keys:** `order_id`, `product_id`, `customer_id`, `campaign_id`, `delivery_partner_id`, `feedback_id`    
@@ -31,45 +31,27 @@ Through this project, I examined patterns in order volume and revenue to underst
 
 | Column Name | Description | Data Type |
 |------------|------------|----------|
-| id | Airbnb's unique identifier for the listing | Integer |
-| name | Name of the listing | String |
-| host_id | Airbnb's unique identifier for the host | Integer |
-| host_name | Name of the host. Usually just the first name(s) | String |
-| neighbourhood_group | Area group | String |
-| neighbourhood | Area name | String |
-| latitude | Location's latitude | Float |
-| longitude | Location's longitude | Float |
-| room_type | All homes are grouped into the four room types [Entire home/apt, Private room, Shared room, Hotel room] | String |
-| price | daily price in local currency | Integer |
-| minimum_nights | minimum number of night stay for the listing (calendar rules may be different) | Integer |
-| number_of_reviews | The number of reviews the listing has | Integer |
-| last_review | Last review date | Date |
-| reviews_per_month | The average number of reviews per month the listing has over the lifetime of the listing | Float |
-| calculated_host_listings_count | The number of listings the host has in the current scrape, in the city/region geography | Integer |
-| availability_365 | Availability x. The availability of the listing is x days in the future as determined by the calendar | Integer |
-| number_of_reviews_ltm | Reviews in last 12 months | Integer |
-| license | License number | String |
-| city | Listing city | String |
-| scrape_date | Data collection date | Date |
+| product_id | Unique identifier for each product | Integer |
+| product_name | Name of the product | String |
+| category | Product category (e.g., Baby Care, Pet Care, Pharmacy) | String |
+| margin_percentage | Profit margin percentage for the product | Float |
+| order_id | Unique identifier for each order | Integer |
+| customer_id | Unique identifier for each customer | Integer |
+| order_date | Date when the order was placed | Date |
+| promised_delivery_time | Expected delivery time committed to customer | DateTime |
+| actual_delivery_time | Actual delivery time of the order | DateTime |
+| order_total | Total value of the order (₹) | Float |
+| delivery_partner_id | Unique ID of delivery partner | Integer |
+| campaign_id | Identifier for marketing campaign applied | Integer |
+| real_roas | Return on Ad Spend (revenue per ad spend) | Float |
+| rating | Customer rating for the order (1–5) | Integer |
+| feedback_id | Unique identifier for customer feedback | Integer |
+| difference_min | Delivery delay in min | Float |
 
 ---
 
 ## Data Cleaning Notes  
-
-| Column Name | Activities |
-|-------|-------|
-| neighbourhood_group | Delete the column because of too many missing data |
-| license | Delete the column because of too many missing data |
-| scrape_date | Delete the column because of same data |
-| price_aprox | Insert a new column to fill the empty cells of `price` column |
-| price_in_inr | Insert a new column to convert the local currency to INR |
-| minimum_revenue | Insert a new column to find the revenue |
-| last_review | Fill the empty cell with `scrape_date` column value and split text to column to find `last_review_year` and `last_review_month` |
-| month_range | Insert a new column to divide a year into four segments |
-| reviews_per_month | Fill the empty cell with average value |
-| host_type | Insert a new column to segment the different types of host |
-| listing_demand | Insert a new column to differentiate the listing demand into three categories |
-
+?
 ---
 
 ## Business Dashboard  
