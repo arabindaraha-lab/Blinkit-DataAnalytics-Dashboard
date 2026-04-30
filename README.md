@@ -13,7 +13,9 @@ Through this project, I examined patterns in order volume and revenue to underst
 
 ## Data Details  
 
-- **Source of Data:** [BlinkitRawData](https://www.kaggle.com/datasets/akxiit/blinkit-sales-dataset/data)
+- **Source of Data:** [DataSource](https://www.kaggle.com/datasets/akxiit/blinkit-sales-dataset/data)
+- **Raw Data:** [RawDatasets](RawDatasets)
+- **Clean Data:** [CleanDatasets](CleanDatasets)
 - **Primary Keys:** `order_id`, `product_id`, `customer_id`, `campaign_id`, `delivery_partner_id`, `feedback_id` etc.  
 - **Dashboard:** [BlinkitDashboard](https://datastudio.google.com/reporting/dc137165-f773-4d62-a1b2-2c70fc607fa7)
 
@@ -43,7 +45,7 @@ Through this project, I examined patterns in order volume and revenue to underst
 | order_total | Total value of the order (₹) | Float |
 | delivery_partner_id | Unique ID of delivery partner | Integer |
 | campaign_id | Identifier for marketing campaign applied | Integer |
-| real_roas | Return on Ad Spend (revenue per ad spend) | Float |
+| roas | Return on Ad Spend (revenue per ad spend) | Float |
 | rating | Customer rating for the order (1–5) | Integer |
 | feedback_id | Unique identifier for customer feedback | Integer |
 | difference_min | Delivery delay in min | Float |
@@ -138,7 +140,7 @@ Through this project, I examined patterns in order volume and revenue to underst
 
 ### A. Key Insights  
 
-- **Profitable ROAS:** RevenueOnAdSpend of 2.38 is profitable with CTR & conversion rate near about 14%.
+- **Profitable ROAS:** RevenueOnAdSpend of 2.38 is profitable with CTR & conversion rate above 14%.
 - **Top Campaigns:** App Push & Referral Program.
 - **Low Performers:** Category Promotion & Festival Offers.
 - **Conversion Drop-off Issue:** High impressions but drop-off in clicks/conversions.
